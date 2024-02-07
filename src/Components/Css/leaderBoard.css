@@ -1,0 +1,32 @@
+@import url("../../App.css");
+.leaderBoardContainer{
+    /* background-color: red; */
+    /* border: 1px solid red; */
+    /* height: 100vh; */
+    padding: 1rem;
+}
+.leaderBoardTitle{
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--lightTextColor);
+    text-align: center;
+}
+.resultContainer{
+    padding: 1rem;
+    background-color: rgba(94, 94, 94, 0.281);
+    margin: .3rem;
+    border-radius: 2rem;
+}
+.resultContainer header{
+    font-size: 1.3rem;
+    /* color: var(--lightTextColor); */
+    color: rgb(187, 187, 187);
+}
+.resultContainer ol li{
+    font-size: 1.1rem;
+    color: white;
+    font-weight: bold;
+}
+.resultContainer ol li span{
+    color: yellow;
+}
