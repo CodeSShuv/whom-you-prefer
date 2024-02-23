@@ -24,6 +24,7 @@ function App() {
       });
     }catch (err){
       console.log(err);
+      alert("Couldn't Fetch data");
     }
   }
   const filldata  =async()=>{
@@ -39,6 +40,7 @@ function App() {
     setleaderBoardData(data);
   }catch (err){
     console.log(err);
+    alert("Couldn't Fetch data");
   }
   }
   useEffect(()=>{
@@ -62,6 +64,7 @@ function App() {
     setAnswerInput("")
   }catch (err){
     console.log(err);
+    alert("Couldn't Post data");
   }
   }
   return (
