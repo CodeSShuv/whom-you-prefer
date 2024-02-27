@@ -11,16 +11,16 @@ function App() {
   const [leaderBoardData,setleaderBoardData] = useState({});
   const fillQuestion = async ()=>{
     try{
-      const res = await fetch("http://localhost:5000/api/questions",{
+      const res = await fetch("https://questionswdyp-default-rtdb.firebaseio.com/data.json",{
         method:'GET',
         headers:{
           'Content-Type':'application/json'
         }
       });
       const data = await res.json()
-      // console.log(data)s
+      console.log(data)
       setQuestion({
-        data:data.data
+        data:data
       });
     }catch (err){
       console.log(err);
@@ -29,7 +29,7 @@ function App() {
   }
   const filldata  =async()=>{
     try{
-    const res = await fetch("http://localhost:5000/api/studentlist",{
+    const res = await fetch("https://testserver-d70a0-default-rtdb.firebaseio.com/student.json",{
       method:'GET',
       headers:{
         'Content-Type':'application/json'
@@ -37,7 +37,9 @@ function App() {
     });
     
     const data = await res.json()
+    console.log(data)
     setleaderBoardData(data);
+    console.log(leaderBoardData)
   }catch (err){
     console.log(err);
     alert("Couldn't Fetch data");
@@ -53,13 +55,7 @@ function App() {
       return
     }
     try{
-    fetch("http://localhost:5000/api/update-data",{
-      method:'POST',
-      headers:{
-        "Content-Type":'application/json'
-      },
-      body: JSON.stringify({ answer:answerInput,questionNo:questionCount })
-    });
+    
     setQuestionCount(questionCount+1)
     setAnswerInput("")
   }catch (err){

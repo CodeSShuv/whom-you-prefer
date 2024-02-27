@@ -12,7 +12,7 @@ const Result = ({ leaderBoardData, question, questionNumber }) => {
             <ol>
                 {
 
-                    leaderBoardData.student.map((e, index) => {
+                    leaderBoardData.map((e, index) => {
 
 
 
