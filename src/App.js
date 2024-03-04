@@ -36,12 +36,12 @@ function App() {
       method:'GET',
       headers:{
         'Content-Type':'application/json'
-      }
+      } 
     });
     
     const data = await res.json()
     console.log(data)
-    await setleaderBoardData({data:data.data});
+    await setleaderBoardData({data:data});
     console.log(leaderBoardData)
   }catch (err){
     console.log(err);
